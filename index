@@ -194,16 +194,34 @@
             justify-content: space-between;
         }
 
-        .logo {
-            font-family: var(--serif);
-            font-size: 29px;
-            font-weight: 600;
-            letter-spacing: 4px;
-        }
+.logo {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    font-family: var(--serif);
+    font-size: 29px;
+    font-weight: 600;
+    letter-spacing: 4px;
+    white-space: nowrap;
+    color: var(--white);
+}
 
-        .logo span {
-            color: var(--gold);
-        }
+.logo-image {
+    width: 44px;
+    height: 44px;
+    object-fit: contain;
+    display: block;
+    flex-shrink: 0;
+    filter: drop-shadow(0 0 8px rgba(212, 175, 55, 0.22));
+}
+
+.logo-text {
+    color: var(--white);
+}
+
+.logo-text > span {
+    color: var(--gold);
+}
 
         .nav-links {
             display: flex;
@@ -1640,6 +1658,21 @@
 
         @media (max-width: 1000px) {
 
+
+
+            @media (max-width: 650px) {
+    .logo {
+        font-size: 21px;
+        letter-spacing: 2.5px;
+        gap: 7px;
+    }
+
+    .logo-image {
+        width: 34px;
+        height: 34px;
+    }
+}
+
             .nav-links {
                 display: none;
             }
@@ -1794,8 +1827,9 @@
     <div class="nav-inner">
 
         <a href="#home" class="logo">
-            DEIN <span>ESSENCE</span>
-        </a>
+    <img src="/Users/johnfranco/Downloads/Screen Recording/617575075_122103959715217954_3248678283725862043_n.jpg" alt="DEIN ESSENCE Logo" class="logo-image">
+    <span class="logo-text">DEIN <span>ESSENCE</span></span>
+</a>
 
         <nav class="nav-links">
 
